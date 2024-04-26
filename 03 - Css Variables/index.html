@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/style.css" rel="stylesheet">
+    <title>Vite App</title>
+    <script src="./src/script.js"  type="module"></script>
+  </head>
+
+
+  <body class="bg-black">
+  <!--Containers-->
+  <div class="w-screen justify-center flex-none">
+
+    <!--Title Section-->
+    <div class="text-7xl text-white font-bold  w-screen   text-center mt-20    ">
+      Update CSS Variables with JS
+    </div>
+
+
+
+    <!--CSS Variables Sections-->
+    <div class="flex grid-cols-3 w-screen mt-20 text-4xl font-bold font-sans text-white justify-center space-x-10">
+        
+      <!--Grid Col Span 1 -->
+        <div class="col-span-1 flex h-14 my-auto ">
+          Spacing : 
+          <input id="spacing" type="range" class="w-28 ml-2 control" min="0" max="100" data-sizing="px" value="0"    />
+          
+        </div>
+
+
+      <!--Grid Col Span 2 -->
+      <div class="col-span-2 flex h-14 my-auto">
+          Blur : 
+          <input id="blur"   type="range"  class=" w-28 ml-2 control" min="0" max="100" data-sizing="px" value="0"   />
+      </div>
+
+
+    <!--Grid Col Span 3 -->
+      <div class="col-span-3 flex h-14 my-auto">
+          Base Color : 
+          <input id="baseColor" type="color" class="w-28 ml-2 my-3"    /> 
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>  
+
+
+
+
+
+
+    <!--Image Section-->
+    <div class="w-screen flex justify-center mx-auto mt-10 ">
+      
+      <!--Image-->
+      <img src="./src/Images/backgroundPhoto.jpeg"  class="spacing   border-red-500" />
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  </body>
+
+
+
+
+  
+</html>
