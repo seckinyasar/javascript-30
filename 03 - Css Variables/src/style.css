@@ -9,5 +9,28 @@
 
 /* This is defined as root because this enables us to use it globally  */
 :root{
-    --main-bg-color : black;
+    --spacing : 0px;
+    --blur :0px;
+    --baseColor : #ffc600; 
+}
+
+
+
+.img{
+    padding : var(--spacing);
+    filter:blur(var(--blur));
+    background:var(--baseColor);
+}
+
+
+.jsText{
+    background: var(--baseColor);
+}
+
+/* How we use prop . We can define some settings via @property.   */
+
+@property --box-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: cornflowerblue;
 }
