@@ -1,16 +1,11 @@
-
-
-
 let minuteHand ; let hourHand ; let secondHand;
 
 
-document.addEventListener('DOMContentLoaded',(e)=>{
     secondHand = document.querySelector('.second-hand');
     minuteHand = document.querySelector('.long-hand');
     hourHand = document.querySelector('.hour-hand');
 
-    timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    console.log(timeZone);
+
     
 
     function setTime(){
@@ -29,7 +24,6 @@ document.addEventListener('DOMContentLoaded',(e)=>{
     setInterval(setTime,1000);
 
 
-})
 
 
 
