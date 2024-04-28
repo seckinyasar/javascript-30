@@ -1,13 +1,23 @@
 const keyName ={
-    A : ("./assets/clap.wav"), 
-    S : ("../assets/sounds/hihat.wav"),
-    D : ("../assets/sounds/kick.wav"),
-    F : ("../assets/sounds/openhat.wav"),
-    G : ("../assets/sounds/boom.wav"),
-    H : ("../assets/sounds/ride.wav"),
-    J : ("../assets/sounds/snare.wav"),
-    K : ("../assets/sounds/tom.wav"),
-    L : ("../assets/sounds/tink.wav"),
+    A : ("/clap.wav"), 
+    S : ("/hihat.wav"), 
+    D : ("/kick.wav"), 
+    F : ("/openhat.wav"), 
+    G : ("/boom.wav"), 
+    H : ("/ride.wav"), 
+    J : ("/snare.wav"), 
+    K : ("/tom.wav"), 
+    L : ("/tink.wav"), 
+
+
+    // S : ("../assets/sounds/hihat.wav"),
+    // D : ("../assets/sounds/kick.wav"),
+    // F : ("../assets/sounds/openhat.wav"),
+    // G : ("../assets/sounds/boom.wav"),
+    // H : ("../assets/sounds/ride.wav"),
+    // J : ("../assets/sounds/snare.wav"),
+    // K : ("../assets/sounds/tom.wav"),
+    // L : ("../assets/sounds/tink.wav"),
 }
 
 
