@@ -19,9 +19,6 @@ document.addEventListener('DOMContentLoaded',(e)=>{
         let minute = time.getMinutes();
         let hour   = time.getHours();
 
-        console.log(minute);
-        console.log(hour);
-
 
         //+90 is added because longHand is horizontal at design time . 
         secondHand.style.transform = 'rotate('+ ((second*6)+90)+'deg)';

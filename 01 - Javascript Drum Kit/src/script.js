@@ -1,5 +1,5 @@
 const keyName ={
-    A : ("../assets/sounds/clap.wav"), 
+    A : ("./assets/clap.wav"), 
     S : ("../assets/sounds/hihat.wav"),
     D : ("../assets/sounds/kick.wav"),
     F : ("../assets/sounds/openhat.wav"),
