@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/style.css" rel="stylesheet">
+    <title>Analog Clock</title>
+
+  </head>
+
+
+
+
+  <body> 
+    
+    <!--Container -->
+    <div class="h-screen w-screen flex items-center bg-custom-purple ">
+      
+      <!--Clock Container-->
+      <div class="w-3/12 h-96 mx-auto my-auto flex items-center ">
+        <!--Clock-->
+        <div class="w-10/12 h-full my-10 mx-auto  clock-shape border-8  relative flex items-center ">
+            
+            <!--Second Hand -->
+            <div class="w-5/12 h-1 bg-black absolute my-auto ml-7 second-hand   ">
+                
+            </div>
+            <!--Long Hand (Minute)-->
+            <div class="w-5/12 h-2 bg-black absolute my-auto ml-7 long-hand   ">
+                
+            </div>
+
+            <!--Short Hand (Hour)-->
+            <div class="w-4/12 h-2.5 bg-black absolute my-auto ml-14 hour-hand">
+
+            </div>
+
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+    
+    <script src="./src/script.js" type="module" ></script>
+  </body>
+
+
+
+</html>
