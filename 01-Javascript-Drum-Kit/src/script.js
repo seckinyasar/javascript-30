@@ -1,6 +1,6 @@
 const keyName ={
     A : ("clap.mp3"), 
-    S : ("public/hihat.mp3"), 
+    S : ("hihat.mp3"), 
     D : ("kick.mp3"), 
     F : ("openhat.mp3"), 
     G : ("boom.mp3"), 
