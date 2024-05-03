@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+    font-family: 'Amatic SC', cursive;
+    font-size: 75px;
+    color:azure;
+}
+
+
+
+.panel{
+    flex:1;
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+    border-color: black;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+
+    
+    transition:
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.13, 0.7,-0.11),
+
+
+
+}
+
+  /* Means everything that is child to panel */
+.panel > * {
+    transition:transform 0.5s;
+}
+
+
+.panel > *:first-child{
+    transform: translateY(-300%);
+}
+.panel > *:last-child{
+    transform: translateY(300%);
+}
+
+
+
+
+.panel-clicked{
+    flex:5;
+
+    *:first-child{
+        transform: translateY(-150%);
+    };
+    *:last-child{
+        transform: translateY(150%);
+    };
+    
+    *:nth-child(2){
+        font-size:1.5em;
+    };
+}
+
+
+
+
+.panel p {
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 1.2em;
+}
+
