@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base : '/03-Flex-Panel-Image-Gallery/'  
+  base : '/05-Flex-Panel-Image-Gallery/'  
 })
 
 
