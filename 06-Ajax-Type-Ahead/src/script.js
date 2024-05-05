@@ -3,39 +3,47 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 
 const cities=[];
 
+const suggestions = document.querySelector('ul');
+
+
 const inputElement = document.querySelector('.search')
-inputElement.addEventListener('keyup',suggest);
+inputElement.addEventListener('keyup',findMatchingSamples);
 
 
 
 export async function fetchData(){
     const response = await fetch(endpoint);
-    console.log(response);
-
     const datas = await response.json();
-
     cities.push(...datas);
-    console.log(cities)
 }
 
 
-export function addLiElement(){
-    let ulElement  = document.getElementById('ul')
-    
-    for(let i = 0 ; i<=10 ;i++){
-        let li = document.createElement('li');
-        li.innerHTML='Hello';
-        li.classList.add('li')
-        ulElement.append(li);
-    }
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
 
 
 
-}   
+
+export function findMatchingSamples(){
+  let matchingCities = cities.filter((element) => {return element['city','state'].toLowerCase().includes(this.value)});
+
+
+  const html = matchingCities.map(place => {
+    const regex = new RegExp(this.value, 'gi');
+    const cityName = place.city.replace(regex, `<span class="hl">${this.value}</span>`);
+    const stateName = place.state.replace(regex, `<span class="hl">${this.value}</span>`);
+    return `
+      <li>
+        <span class="name">${cityName}, ${stateName}</span>
+        <span class="population">${numberWithCommas(place.population)}</span>
+      </li>
+    `;
+  }).join('');
+  suggestions.innerHTML = html;
 
 
 
-export function suggest(text){
-    console.log(cities.filter((element) => {return element['city','state'].toLowerCase().includes(this.value)  }));
+
 
 }

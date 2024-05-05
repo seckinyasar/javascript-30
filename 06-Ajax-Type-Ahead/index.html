@@ -20,8 +20,8 @@
       <input id="inputSearch" type="text"  placeholder="City or State   "
       class="search  placeholder-stone-600    border-gray-100">
       <ul id="ul" class=" ul text-xl text-center mx-10 ">
-        <li class="li">Filter For A City</li>
-        <li class="li">Or A State</li>  
+        <li >Filter For A City</li>
+        <li >Or A State</li>  
       </ul>
     </form>
 
@@ -39,9 +39,11 @@
 
 
   <script type="module">
-    import {addLiElement , fetchData , suggest} from './src/script.js'
+    import { fetchData , findMatchingSamples  } from './src/script.js'
     fetchData();
-    suggest();
+    findMatchingSamples();
+
+
   </script>
   </body>
   

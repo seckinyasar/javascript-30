@@ -26,16 +26,22 @@ html{
 
 .ul{
     font-family: 'Times New Roman', Times, serif;
-    
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 
-.li{
+.ul li{
     background:white;
     border-bottom: 1px solid #D8D8D8;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
     display: flex;
     padding: 20px;
+    justify-content: space-between;
+    margin: 0px 40px 0px 40px;
+    list-style: none;
+    
 
 }
 
@@ -52,6 +58,14 @@ html{
     background:linear-gradient(to top, #ffffff 0% , #EFEFEF 100%);
 }
 
-.li-population{
-    font-size:15px;
-}
+
+
+
+span.population {
+    font-size: 15px;
+  }
+  
+  .hl {
+    background: #ffc600;
+  }
+  
