@@ -2,28 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="src/style.css" rel="stylesheet">
+    <link href="/src/style.css" rel="stylesheet">
     <title>Vite App</title>
   </head>
   <body>
 
 <!--Screen Container-->
-<div class="w-screen flex">
+<div class="w-screen h-screen flex overflow-x-hidden">
 
   <!--Seach Area Container-->
-  <div class="w-screen mt-16 flex  justify-center">
+  <div class="w-screen mt-16 flex  justify-center  ">
 
     <!--Form-->
-    <form class="" >
-      <input id="inputSearch" type="text"  placeholder="City or State   "
-      class="search  placeholder-stone-600    border-gray-100">
-      <ul id="ul" class=" ul text-xl text-center mx-10 ">
-        <li >Filter For A City</li>
-        <li >Or A State</li>  
+    <form class="">
+      <input id="inputSearch" type="text"  placeholder="Search City or State" class="search  placeholder-stone-600    border-gray-100">
+      <ul id="ul" class="ul text-xl">
+          <li>Filter for a city</li>
+          <li>or a state</li>
       </ul>
     </form>
+
 
 
   </div>
@@ -39,9 +38,8 @@
 
 
   <script type="module">
-    import { fetchData , findMatchingSamples  } from './src/script.js'
+    import { fetchData , findMatchingSamples  } from '/src/script.js'
     fetchData();
-    findMatchingSamples();
 
 
   </script>

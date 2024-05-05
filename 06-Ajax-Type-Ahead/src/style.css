@@ -16,10 +16,11 @@ html{
     font-size: 2.25rem;
     line-height: 2.5rem;
     text-align: center;
-    padding :1.5rem;
+    padding :1rem;
     border-width: 10px;
     border-radius: 0.5rem;
-    transform: translateY(3px);
+    transform: translateY(3px);     
+    z-index: 2;
 }
 
 
@@ -28,8 +29,13 @@ html{
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    position: relative;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    text-align: center;
+    
 }
+
+
 
 
 .ul li{
@@ -39,10 +45,8 @@ html{
     display: flex;
     padding: 20px;
     justify-content: space-between;
-    margin: 0px 40px 0px 40px;
-    list-style: none;
+    text-transform: capitalize;
     
-
 }
 
 
@@ -65,7 +69,8 @@ span.population {
     font-size: 15px;
   }
   
-  .hl {
+  
+.hl {
     background: #ffc600;
   }
   
