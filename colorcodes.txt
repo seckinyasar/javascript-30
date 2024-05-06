@@ -1,0 +1,5 @@
+    border-color :#E1D9F4;
+
+    
+    /* Alternative Colors */
+    /* border-color:#C8C1D6;  */
