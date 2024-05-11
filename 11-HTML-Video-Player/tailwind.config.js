@@ -4,7 +4,11 @@ export default {
     "./index.html",
   ],
     theme: {
-    extend: {},
+    extend: {
+      backgroundImage:{
+        'obito':"url('/src/images/obito-uchiha.jpg')",
+      }
+    },
   },
   plugins: [],
 }

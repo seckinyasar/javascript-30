@@ -11,38 +11,31 @@ body{
 
 
 
-.player:hover .progress{
-    bottom:2rem;
+.player:hover .progress_bar_container {
+    bottom:1.5rem;
     opacity: 100;
-    
+    height: 1rem;
+    transition: 0.2s;
 }
 
 .player:hover .player_controls{
     visibility: visible;
-    transition: 0.5s;    
+    transition: 0.2s;
 }
 
-.player:hover .progress__filled{
-    height: 1rem;
 
-}
+
 
 
 .progress {
-    flex: 10;
-    position: relative;
-    display: flex;
-    flex-basis: 100%;
-    height: 0.25rem;
-    transition: height 0.3s;
-    background: rgba(0,0,0,0.5);
-    cursor: ew-resize;
-    bottom: 0;
-  }
+    background: rgba(0,0,0,0.8);
+    cursor:pointer;
+    width: 100%;    
+}
+
 
 .progress__filled {
-    width: 50%;
-    background: #4e8f79;
+    background: yellowgreen;
     flex: 0;
     flex-basis: 0%;
 
