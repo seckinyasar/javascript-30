@@ -1,10 +1,11 @@
 const player = document.querySelector('.player');
 const video = player.querySelector('.player_video');
-const progress = player.querySelector('.progress');
 const progressBar = player.querySelector('.progress__filled');
-const toggle = player.querySelector('.toggle');
+const progressDiv = player.querySelector('.progress');
+
+const toggle = player.querySelector('.togglePlayPause');
 const skipButtons = player.querySelectorAll('[data-skip]');
-const ranges = player.querySelectorAll('.player__slider');
+const ranges = player.querySelectorAll('.player_slider');
 
 
 
@@ -15,18 +16,56 @@ const ranges = player.querySelectorAll('.player__slider');
 
 // Functions
 
-function togglePlay(){
+function togglePlayByVideo(){
     if(video.paused ? video.play() : video.pause());
-    console.log("clicked")
+}
+
+function togglePlayByButtons(){
+    if(video.paused){
+        this.innerHTML = "⏹️"
+        video.play();
+    }
+    else{
+        this.innerHTML ="▶"
+        video.pause();
+    }
 }
 
 
+function skip(){
+    console.log(this.dataset.skip);
+    video.currentTime += parseFloat(this.dataset.skip);
+}
 
 
+function sliderEvent(){
+    video[this.name] = this.value;
+}
+
+function handleProgress(){
+    const percent = (video.currentTime / video.duration) * 100;
+    progressBar.style.flexBasis=`${percent}%`;
+}
+
+function skipByClicking(e){
+    const time = (e.offsetX / progressBar.offsetWidth) * video.duration;
+    video.currentTime = time;
+    console.log(time)
+}
 
 
+//Event Handlers
 
+video.addEventListener('click',togglePlayByVideo);
 
-video.addEventListener('click',togglePlay);
+toggle.addEventListener('click',togglePlayByButtons);
 
-console.log(video)
+skipButtons.forEach(x => x.addEventListener('click',skip))
+
+ranges.forEach(x => x.addEventListener('input',sliderEvent))
+
+video.addEventListener('timeupdate',handleProgress);
+
+    
+progressDiv.addEventListener('click',skipByClicking);
+
