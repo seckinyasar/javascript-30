@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/style.css" rel="stylesheet">
+    <title>Key Sequence Detection</title>
+  </head>
+  <body>
+
+
+
+    <!--Screen Container-->
+    <div class="w-screen h-screen flex relative justify-center">
+
+
+      <!--Before JS Code Run-->
+      <div class="w-6/12 flex  h-60 mt-20  smoke  items-center text-center text-5xl text-div">
+        <p> Hi , this app is designed to learn how to recognize sequential typing.
+        <br><br>
+        To start listening to the music, type <span class="text-black">'play'</span>.  
+        </p>
+      </div>
+
+
+
+
+      <!--Player Parent Container-->
+      <div class="w-full flex absolute  text-black   h-28  bottom-20  visibility-for-player ">
+        <!--Player Container -->
+        <div class="w-full flex bg-smoke  h-full mx-14 rounded-ss-3xl rounded-ee-3xl overflow-hidden opacity-90 ">
+          
+          <!--Photo-->
+          <div class="w-2/12 h-full overflow-hidden    ">
+              <img src="src/Images/Laura.jpg" > 
+          </div>
+
+
+          <!--Song And Song Name Section-->
+          <div class="w-full h-full flex-row items-center">
+
+            <!--Song Name-->
+            <div class="w-full h-3/6 ml-5 flex items-center ">
+                <p class="custom-text">
+                  Laura Branigan  -  
+                  Self Control
+                </p>
+            </div>
+
+            <!--Audio Part-->
+            <div class="w-full h-3/6 ">
+              <audio controls class="w-full audio">
+                <source src="src/Videos/Laura-Branigan-Self-Control.mp3"  type="audio/mpeg" >
+
+
+
+              </audio>
+
+            </div>
+            
+            
+          </div>
+
+
+
+
+        </div>
+      </div>
+    
+
+    </div>
+
+
+
+
+
+    <script type="module" src="src/script.js "></script>
+  </body>
+  
+</html>
