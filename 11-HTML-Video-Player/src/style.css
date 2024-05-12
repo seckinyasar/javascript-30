@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 
+/*  
+Watched Color
+#911009
 
-body{   
-    background-color:#E1D9F4 ;
-}
+*/
+
+
 
 
 
@@ -17,7 +20,6 @@ body{
     height: 1rem;
     transition: 0.2s;
 }
-
 .player:hover .player_controls{
     visibility: visible;
     transition: 0.2s;
@@ -28,15 +30,20 @@ body{
 
 
 .progress {
-    background: rgba(0,0,0,0.8);
+    background: rgba(66, 65, 65, 0.8);
     cursor:pointer;
     width: 100%;    
-}
+}   
 
 
 .progress__filled {
-    background: yellowgreen;
+    background: #b61108;
     flex: 0;
     flex-basis: 0%;
+}
+
+.player_controls{
+    background:rgb(59, 58, 58);
 
 }
+
