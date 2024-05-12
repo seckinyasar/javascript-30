@@ -1,4 +1,6 @@
 
+
+// Selectors
 const player = document.querySelector('.player');
 const video = player.querySelector('.player_video');
 
@@ -20,6 +22,7 @@ const fullScreenButton = player.querySelector('.fullScreen_button');
 
 
 
+
 // Functions
 
 function togglePlayByVideo(){
@@ -30,7 +33,6 @@ function togglePlayByVideo(){
     else{
         video.pause();
         togglePlayPause.innerHTML="▶"
-        
     }
 }
 
@@ -63,9 +65,6 @@ function handleProgress(){
     progressBar.style.flexBasis=`${percent}%`;
 }
 
-
-
-
 function toggleFullScreen() {
     if (!document.fullscreenElement) {
       player.requestFullscreen();
@@ -90,7 +89,7 @@ function enableHover() {
 
 
 
-//Event Handlers
+//Event Listeners 
 
 video.addEventListener('click',togglePlayByVideo);
 
@@ -128,21 +127,25 @@ progressDiv.addEventListener("mousemove", (e) =>{
     }} 
 )
 
-
 document.addEventListener("mouseup", () => {
         mousedown = false;
 })
-
-
-
 
 fullScreenButton.addEventListener('click',toggleFullScreen);
 
 
 
 
-//After Full Screen 
 
+
+
+
+
+
+
+
+
+//Mouse Move Listener to Toggle Hover
 let timer = 0;
 document.addEventListener('mousemove', () => {
     enableHover();
@@ -155,11 +158,8 @@ document.addEventListener('mousemove', () => {
 
 
 
-
 // SWITCH CASE FOR KEY BINDINGS
-
 document.addEventListener('keydown',(event)=>{
-    console.log(event.code)
         switch (event.code){
             case 'Space' : // SPACE
                 togglePlayByVideo();
@@ -173,7 +173,6 @@ document.addEventListener('keydown',(event)=>{
             case 'KeyF':
                 toggleFullScreen();
                 break;
-
         }
 
 
@@ -183,7 +182,6 @@ document.addEventListener('keydown',(event)=>{
 
 
 //KEY BINDINGS FOR SKIPPING WITH NUMPADS AND DIGITS
-
 document.addEventListener('keydown',(event)=>{
     if (event.key >= '0' && event.key <='9' ){
         let targetPartition = (event.key*0.1)
@@ -193,8 +191,13 @@ document.addEventListener('keydown',(event)=>{
 
     
 
-
-
+//Dbl Click Event For Toggle FullScreen
 video.addEventListener('dblclick',(e) =>{
     toggleFullScreen();
 })
+
+//Set Video Volume At Load  // It is set to 0.05 just because I didn't want to scare users and I wanted to encourage them to use inputs . 
+window.onload = () => {
+    if (video) {
+        video.volume = 0.05;
+    }}
