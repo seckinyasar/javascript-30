@@ -13,3 +13,6 @@ These are the apps that I have built during javascript exercise tutorials .
 ### Tech Stack
 - Vite 
 - Tailwind CSS
+
+### Sources
+The sources of the images , audios and videos used are specified in the respective project folder.
