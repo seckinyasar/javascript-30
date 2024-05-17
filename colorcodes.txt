@@ -1,24 +1,13 @@
-    border-color :#E1D9F4;
-
-    
     Alternative Colors 
-
+    border-color :#E1D9F4;
     border-color:#C8C1D6;  
 
 
-
     background-color: #C8C1D6;
+    background-color: #C8C1D0 ;
 
 
 
 <!--     
-    <a href="./01-Javascript-Drum-Kit/dist/index.html" target="_blank"> Drum Kit </a>
-    <br>
-    <a href="./02-Clock/dist/index.html" target="_blank"> CSS + JS Clock </a>
-    <a href="./03-Css-Variables/dist/index.html" target="_blank"> CSS Variables</a>
-    <a href="./05-Flex-Panel-Image-Gallery/dist/index.html" target="_blank"> Flex Panel Image Gallery</a>
-   <p> <a href="./06-Ajax-Type-Ahead/dist/index.html" target="_blank"> Ajax Type Ahead</a>  </p>
-   <p> <a href="./10-Hold-Shift-To-Check-Multiple-Checkboxes/dist/index.html" target="_blank"> Check-Multiple-Checkboxes</a></p>
-   <p> <a href="./11-HTML-Video-Player/dist/index.html" target="_blank"> HTML Video Player</a></p>
    <p> <a href="./12-Key-Sequence-Detection/dist/index.html" target="_blank"> Key Sequence Detection</a></p>
  -->    
