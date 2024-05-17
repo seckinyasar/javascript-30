@@ -1,0 +1,55 @@
+{
+    "projects": [
+      {
+        "number": 1,
+        "name": "Javascript Drum Kit",
+        "path": "../01-Javascript-Drum-Kit/dist/index.html"
+      },
+      {
+        "number": 2,
+        "name": "Clock",
+        "path": "../02-Clock/dist/index.html"
+      },
+      {
+        "number": 3,
+        "name": "CSS Variables",
+        "path": "../03-Css-Variables/dist/index.html"
+      },
+      {
+        "number": 4,
+        "name": "Flex Panel Image Gallery",
+        "path": "../05-Flex-Panel-Image-Gallery/dist/index.html"
+      },
+      {
+        "number": 5,
+        "name": "Ajax Type Ahead",
+        "path": "../06-Ajax-Type-Ahead/dist/index.html"
+      },
+      {
+        "number": 6,
+        "name": "Check Multiple Checkboxes",
+        "path": "../10-Hold-Shift-To-Check-Multiple-Checkboxes/dist/index.html"
+      },
+      {
+        "number": 7,
+        "name": "HTML Video Player",
+        "path": "../11-HTML-Video-Player/dist/index.html"
+      },
+      {
+        "number": 8,
+        "name": "Key Sequence Detection",
+        "path": "../12-Key-Sequence-Detection/dist/index.html"
+      },
+      {
+        "number": 9,
+        "name": "Slide in on Scroll",
+        "path": "../13-Slide-in-on-Scroll/dist/index.html"
+      },
+      {
+        "number": 10,
+        "name": "Local Storage",
+        "path": "../15-Local-Storage-and-Event-Delegation/dist/index.html"
+      }
+    ]
+  }
+  
