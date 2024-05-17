@@ -42,7 +42,7 @@
 
       async function getPaths() {
         try {
-          const response = await fetch('../projectPaths.JSON');
+          const response = await fetch('../projectPaths.json');
           const data = await response.json();
           return data.projects;
         } catch (error) {
