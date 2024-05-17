@@ -1,87 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-  <link rel="stylesheet" crossorigin href="assets/style.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <link rel="stylesheet" crossorigin href="assets/style.css">
+  </head>
+  <body>
 
 
 
-  <!-- Screen Container -->
-  <div class="w-screen  ">
-
-
-    <!-- UL Container --> 
-    <div class="max-w-sm mx-auto mt-20 rounded-2xl border-4 ul-container bg-white ">
-
-            <div  class="item ">
-                <span>1.</span>
-                <p><a href="../01-Javascript-Drum-Kit/dist/index.html" target="_blank">Javascript Drum Kit</a></p>
-            </div>
-
-
-            <div  class="item ">
-                <span>2.</span>
-                <p><a href="../02-Clock/dist/index.html" target="_blank">Clock</a></p>
-            </div>
-
-
-            <div  class="item ">
-                <span>3.</span>
-                <p><a href="../03-Css-Variables/dist/index.html" target="_blank">CSS Variables</a></p>
-            </div>
-
-
-            <div  class="item ">
-                <span>4.</span>
-               <p><a href="../05-Flex-Panel-Image-Gallery/dist/index.html" target="_blank"> Flex Panel Image Gallery</a></p> 
-            </div>
-
-
-            <div  class="item ">
-                <span>5.</span>
-                <p> <a href="../06-Ajax-Type-Ahead/dist/index.html" target="_blank"> Ajax Type Ahead</a>  </p>
-            </div>
-
-
-            <div  class="item ">
-                <span>6.</span>
-                <p><a href="../10-Hold-Shift-To-Check-Multiple-Checkboxes/dist/index.html" target="_blank"> Check Multiple Checkboxes</a></p>
-            </div>
-
-
-            <div  class="item ">
-                <span>7.</span>
-                <p> <a href="../11-HTML-Video-Player/dist/index.html" target="_blank"> HTML Video Player</a></p>
-            </div>
-
-
-            <div  class="item ">
-                <span>8.</span>
-                <p> <a href="../12-Key-Sequence-Detection/dist/index.html" target="_blank"> Key Sequence Detection</a></p>
-            </div>
-
-            <div  class="item ">
-                <span>9.</span>
-                <p> <a href="../13-Slide-in-on-Scroll/dist/index.html" target="_blank"> Slide in on Scroll</a></p>
-            </div>
-
-            <div  class="item ">
-                <span>10.</span>
-                <p> <a href="../15-Local-Storage-and-Event-Delegation/dist/index.html" target="_blank">Local Storage </a></p>
-            </div>
-
-
-    </div>  
-
-
-
-  </div>
+    <!-- Screen Container -->
+    <div class="w-screen">
+      <!-- UL Container -->
+      <div
+        class="max-w-sm mx-auto mt-20 rounded-2xl border-4 ul-container bg-white"
+      ></div>
+    </div>
 
 
 
@@ -90,18 +25,53 @@
 
 
 
-  <script>
-
-    async function getPaths(){
-        const response = await fetch()
-    }
 
 
 
-  </script>
-</body> 
+
+    <script>
+      const container = document.querySelector(".ul-container");
+
+      getPaths()
+        .then((projects) => {
+          createElements(projects);
+        })
+        .catch((error) => {
+          console.error("Proje verileri alınamadı:", error);
+        });
+
+      async function getPaths() {
+        try {
+          const response = await fetch("projectPaths.json");
+          const data = await response.json();
+          return data.projects;
+        } catch (error) {
+          console.error("Hata:", error);
+          return [];
+        }
+      }
+
+      // CREATING HTML ELEMENTS
+      function createElements(projects) {
+        projects.forEach((project) => {
+          const div = document.createElement("div");
+          div.classList.add("item");
+
+          const span = document.createElement("span");
+          span.textContent = `${project.number}.`;
+          div.appendChild(span);
+
+          const p = document.createElement("p");
+          const a = document.createElement("a");
+          a.href = project.path;
+          a.target = "_blank";
+          a.textContent = project.name;
+          p.appendChild(a);
+          div.appendChild(p);
+
+          container.appendChild(div);
+        });
+      }
+    </script>
+  </body>
 </html>
-
-
-
-
