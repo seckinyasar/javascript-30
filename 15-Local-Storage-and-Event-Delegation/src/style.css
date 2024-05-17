@@ -5,62 +5,50 @@
 
 
 html{
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    font-weight: 200;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
 
 }
 
 .oh-la-la-background{
-    background-image: url("/src/images/oh-la-la.jpeg");
+    background-image: url("images/oh-la-la.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 svg {
-  fill: white;
-  background: rgba(0, 0, 0, 0.1);
+  fill:rgb(196, 15, 12,0.7);
+  background: rgba(174, 45, 28, 0.3);
   padding: 20px;
   border-radius: 50%;
   width: 200px;
-  min-width:200px;
 }
 
-.custom-background{
-    background-color: #C8C1D0;
-}
 
 
 li{
     margin-bottom: 0.5rem;
 }
 
-input[type='checkbox']{
-    margin-left: 0.5rem;
-    margin-right: 0.25rem;
+
+.custom-form label{
+    flex: 1;
+    cursor: pointer;
 }
 
-textNode{
-    margin-left: 0.5rem;
+.custom-form input{
+    display: none;
 }
 
-
-
-.plates input{
+.custom-form input + label:before {
     content: "⬜️";
     margin-right: 10px;
-  }
-  
-.plates input:checked{
-    content: "🌮";
-  }
-
-
-
-.custom-form{
-    border-bottom: 1px solid ;
-
 }
+.custom-form input:checked + label:before {
+    content: "🌮";
+}
+
 
 .custom-input-border{
     border:0.5px gainsboro solid;
@@ -74,21 +62,14 @@ textNode{
     padding: 10px;
     outline: 0;
     border: 1px solid rgba(0,0,0, 0.1);
-
 }
-
     
 .custom-menu{
     border-top-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
 }
-
 .custom-clear{
     border:0.5px gainsboro solid;
 }
 
-/* 
 
-border-color :#E1D9F4;
-border-color:#C8C1D6;  
- */

@@ -1,0 +1,4 @@
+items-center öge eklerken height'in taşmasını sağlıyordu .
+
+checkbox background vs değiştirmeyi ögrendik .
+

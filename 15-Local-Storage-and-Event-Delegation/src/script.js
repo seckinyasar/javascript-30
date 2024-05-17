@@ -8,30 +8,57 @@ const clearButton = document.querySelector(".custom-clear")
 
 
 
+
+// THE FIRST THREE
+let retrievedInitialItems;
+if(localStorage.getItem('initialItems') == null ){
+    let initialItems = [{text:"Your eyes",done:true},{text:"Your smile",done:true},{text:"Your lips",done:true}]
+    retrievedInitialItems = initialItems;
+    localStorage.setItem('initialItems',JSON.stringify(retrievedInitialItems))
+}
+else{
+    retrievedInitialItems = JSON.parse(localStorage.getItem('initialItems'));
+}
+
+
+
+
+const showInitialItems = localStorage.getItem('initialItems')
+if(showInitialItems && showInitialItems.length >0){
+    createElements(retrievedInitialItems);
+}
+
+  
+
+
 let text = inputItem.value.trim;
 let items = []
 
-    // { text:"Sütlü Simit", done:false,}]
+
 
 
 // GET THE DATAS FIRST
 const storedItems = JSON.parse(localStorage.getItem('items'));
 if (storedItems && storedItems.length > 0) { 
     items = storedItems;
-    showItems();
+    createElements(items)
 }
 
 
 
 //CLEAR EVENT
 clearButton.addEventListener('click',(e)=>{
-    localStorage.clear();
-    items = [];
+    items = []
+    localStorage.setItem('items',JSON.stringify(items))
+    retrievedInitialItems = []
+    localStorage.setItem('initialItems',JSON.stringify(retrievedInitialItems))
+
     form.innerHTML="";
 })
 
-// SUBMIT EVENT
 
+
+// SUBMIT EVENT
 document.addEventListener('submit',(e)=>{
     e.preventDefault();
 
@@ -39,9 +66,8 @@ document.addEventListener('submit',(e)=>{
         inputItem.value = "";
 
         populateStorage();
-        showItems();
+        createElements(items)
 })
-
 
 
 
@@ -49,17 +75,7 @@ document.addEventListener('submit',(e)=>{
 // ADD ITEMS TO LOCALSTORAGE
 function populateStorage(){
     localStorage.setItem('items',JSON.stringify(items))
-}
-
-
-
-
-
-
-
-// TO SHOW ITEMS FROM LOCALSTORAGE
-function showItems(){
-    createElements(items);
+    localStorage.setItem('initialItems',JSON.stringify(retrievedInitialItems))
 }
 
 
@@ -72,27 +88,51 @@ function showItems(){
 // CREATE ELEMENTS WITH GIVEN PARAMETER
 function createElements(itemsToBeCreated){
     const existingItems = Array.from(form.querySelectorAll('li')).map(li => li.textContent.trim());
-    itemsToBeCreated.forEach((element,index) => {
 
+    // CUSTOM INDEX IS USED TO HANDLE TWO DIFFERENT PARAMETER , OTHERWISE IT STARTS WITH INDEX 0 AGAIN . 
+    let nextIndex = document.querySelectorAll('input[type="checkbox"]').length  
+
+    itemsToBeCreated.forEach((element) => {
         if (!existingItems.includes(element.text)){
 
             let liElement = document.createElement('li');
             let checkbox = document.createElement('input')
             checkbox.type='checkbox';
             checkbox.checked=element.done;
-            checkbox.classList.add(".plates")
+
+
+            checkbox.dataset.index = nextIndex; 
+            checkbox.id = `item${nextIndex}`; 
+
+
+            //DEBUG
+            // console.log(checkbox.dataset.index)
+            // console.log(checkbox.id)
+     
+            let label  = document.createElement('label')
+            label.setAttribute('for' ,`item${nextIndex}`)
+            label.textContent = element.text;
+
+
 
             checkbox.addEventListener('change', function() {
-                items[index].done = this.checked; 
-                console.log(index)
-
+                element.done = this.checked; 
+                console.log(element)
                 populateStorage();
               });
         
-            const textNode = document.createTextNode(element.text);
+
             liElement.appendChild(checkbox)
-            liElement.appendChild(textNode)
+            liElement.appendChild(label)
             form.appendChild(liElement);
+
+            nextIndex++;
     }
     });
 }
+
+
+
+
+
+
