@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html{
+    background: #C8C1D0 ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.ul{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    text-align: center;
+}
+
+
+
+
+.ul li{
+    background:white;
+    border-bottom: 1px solid #D8D8D8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    text-transform: capitalize;
+    justify-content: center;    
+}
+
+
+
+.ul li:nth-child(even){
+    transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+    background:linear-gradient(to bottom, #ffffff 0% , #EFEFEF 100%);
+}
+
+
+.ul li:nth-child(odd){
+    transform: perspective(100px) rotateX(-3deg) translateY(3px) ;
+    background:linear-gradient(to top, #ffffff 0% , #EFEFEF 100%);
+}
+
+
