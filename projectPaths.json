@@ -54,6 +54,11 @@
         "number": 11,
         "name": "Mouse Shadow",
         "path": "../16-Mouse-Shadow/dist/index.html"
+      },
+      {
+        "number": 12,
+        "name": "Sort Without Articles",
+        "path": "../17-Sort-Without-Articles/dist/index.html"
       }
 
 
