@@ -49,6 +49,11 @@
         "number": 10,
         "name": "Local Storage",
         "path": "../15-Local-Storage-and-Event-Delegation/dist/index.html"
+      },
+      {
+        "number": 11,
+        "name": "Mouse Shadow",
+        "path": "../16-Mouse-Shadow/dist/index.html"
       }
 
 
