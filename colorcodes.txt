@@ -7,7 +7,13 @@
     background-color: #C8C1D0 ;
 
 
+/* 
+F0E68C / Cream
+F3E5AB / Vanilia Gold
+F2D7D5 / Soluk Gül Altını
+F4C2C2 / Şeftali Gül
 
-<!--     
-   <p> <a href="./12-Key-Sequence-Detection/dist/index.html" target="_blank"> Key Sequence Detection</a></p>
- -->    
+
+D1BFF2 / Purple
+decffa
+*/
