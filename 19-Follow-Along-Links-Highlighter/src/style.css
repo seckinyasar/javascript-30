@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Angels';
+    src: url(./fonts/CallingAngelsPersonalUse.ttf) format('truetype');
+    font-weight: 1;
+    font-style:normal;
+}@font-face {
+    font-family: 'MagentaRose';
+    src: url(./fonts/Magenta-Rose.ttf) format('truetype');
+    font-style:normal;
+    font-weight: 100;
+}
+
+
+
+
+body{
+    background-color: #C8CCD8;
+    font-family: 'MagentaRose';
+    font-weight: 400;
+}
+
+.line-height{
+    line-height: 4rem;
+}
+
+a{
+    background: rgba(0,0,0,0.07);
+    border-radius: 1rem;
+    padding:0.35rem;    
+}
+
+
+.highlight {
+    transition: all 0.2s;
+    position:absolute;
+    top: 0;
+    background: whitesmoke;
+    left: 0;
+    z-index: -1;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
