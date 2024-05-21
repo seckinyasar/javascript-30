@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" crossorigin src="assets/script.js"></script>
+    <link rel="stylesheet" crossorigin href="assets/style.css">
+  </head>
+  <body>
+
+
+<!--Screen Container--> 
+<div class="w-screen h-screen flex justify-center overflow-x-hidden">
+
+      <!--Card Container -->
+      <div class="bg-white  lg:w-3/12 lg:min-w-96 sm:min-w-72
+       h-auto my-auto rounded-xl  card-container ">
+
+
+        <!--Contents Container-->
+        <div class="flex flex-col">
+
+          <!--Name Of The APP-->
+          <div class="flex justify-center items-center text-4xl p-8 rounded-t-xl  color-try ">
+              Speech Synthesis 
+          </div>
+
+          <!--Select Voice OPTIONS-->
+          <div class="flex justify-center items-center text-l ">
+            <select class="w-full my-4 mx-4 select p-0.5" name="voice" id="voices">
+                <option ></option>
+            </select>
+          </div>
+
+
+          <!--RATE-->
+          <div class="mx-4 mt-1 mb-3 text-lg">
+             <label for="">Rate : </label>
+              <br>
+             <input class="w-full flex"
+              type="range" id="rateInput" min="0" max="2" step="0.25" value="1"/>
+          </div>
+
+          
+          
+
+          <!--PITCH-->
+          <div class="mx-4 mt-1 text-lg">
+            <label for="">Pitch : </label>
+             <br>
+            <input class="w-full flex"
+             type="range" id="pitchInput" min="0" max="2" step="0.25" value="1"/>
+         </div>
+
+
+
+         <!--TEXT AREA-->
+         <div class="mx-4 mt-6 mb-2">
+          <textarea class="w-full h-40 bg-gray-100 text-xl inputtxt text-start">Transform your words into speech , just type your text , choose your narrator and click 'Start' . 
+          </textarea>
+         </div>
+
+
+
+         <!--Buttons-->
+         <div class="mx-4 mb-3 mt-1 flex justify-between space-x-4 text-2xl ">
+          <button class="color-try   w-1/2 h-14  button-toggle button-toggle-stop  ">Stop</button>
+          <button class="color-try   w-1/2 h-14  button-toggle button-toggle-start  ">Start</button>
+         </div>
+
+
+
+        </div>
+
+      </div>
+
+</div>
+
+
+
+
+
+
+
+  </body>
+  
+</html>
