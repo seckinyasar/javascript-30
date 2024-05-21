@@ -64,6 +64,11 @@
         "number": 13,
         "name": "Follow Along Links Highlighter",
         "path": "../19-Follow-Along-Links-Highlighter/dist/index.html"
+      },
+      {
+        "number": 14,
+        "name": "Speech Synthesis",
+        "path": "../20-Speech-Synthesis/dist/index.html"
       }
 
 
