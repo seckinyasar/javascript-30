@@ -59,6 +59,11 @@
         "number": 12,
         "name": "Sort Without Articles",
         "path": "../17-Sort-Without-Articles/dist/index.html"
+      },
+      {
+        "number": 13,
+        "name": "Follow Along Links Highlighter",
+        "path": "../19-Follow-Along-Links-Highlighter/dist/index.html"
       }
 
 
