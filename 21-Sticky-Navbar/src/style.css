@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html{
+    font-family: 'Times New Roman', Times, serif;
+
+    background-color:#dfdfe0 ;
+}
+
+
+/* 
+F0E68C / Cream
+F3E5AB / Vanilia Gold
+F2D7D5 / Soluk Gül Altını
+F4C2C2 / Şeftali Gül
+D1BFF2 / Purple
+decffa
+
+#C8C1D6;
+
+#C8C1D0 
+
+#E1D9F4
+
+*/
+a{
+    height: 100%;
+    align-content: center;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.a-visible-none{
+    display:none;
+}.a-visible-block{
+    display:block;
+    background-color: whitesmoke;
+    color:black;
+
+
+
+}
