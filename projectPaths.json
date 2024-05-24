@@ -69,6 +69,11 @@
         "number": 14,
         "name": "Speech Synthesis",
         "path": "../20-Speech-Synthesis/dist/index.html"
+      },
+      {
+        "number": 15,
+        "name": "Stick Navbar And Wikipedia API",
+        "path": "../21-Sticky-Navbar/dist/index.html"
       }
 
 
