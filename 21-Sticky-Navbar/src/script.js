@@ -12,30 +12,67 @@ const elementOffSet = stickyElement.offsetTop;
 
 
 function toggleNavbarVisibility() {
-
-
     const isScrolled = window.scrollY > elementOffSet;
     aElement.classList.toggle('a-visible-block', isScrolled);
     aElement.classList.toggle('a-visible-none', !isScrolled);
 
   }
-
 window.addEventListener('scroll',toggleNavbarVisibility)
 
 
+let apiTextValue;
 
-function wikipediaFetch(){
-    fetch('https://tr.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro&explaintext&redirects=1&titles=Türkiye')
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
+// FETCHING WIKIPEDIA API
+const endpoint = 'https://en.wikipedia.org/w/api.php';
+const params = new URLSearchParams({
+  origin: '*',
+  action: 'parse',
+  format: 'json',
+  page: 'Industrial Revolution',
+  prop: 'text',
+  redirects: 1,
+  section: 0, // Sadece özet almak için
+
+});
+
+
+
+
+async function wikipediaFetch() {
+
+    fetch(`${endpoint}?${params.toString()}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      return response.json();
     })
-    .catch(error => {
-      console.error('Hata:', error);
-    });
+    .then(data => {
+      const rawHTML = data.parse.text['*'];
+
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = rawHTML;
+
+
+      const content = tempDiv.querySelectorAll('p,h1,h2,h3,h4,h5,h6');
+      let filteredContent = '';
+      for (let i = 0; i < content.length; i++) {
+        filteredContent += content[i].outerHTML;
+      }
+
+      // Real div
+      wikipediaTextDiv.innerHTML = filteredContent;
+
+    })
+  .catch(error => { 
+    console.error('Error:', error); 
+  });
 
 }
+
+
 wikipediaFetch();
+
 
 
 
