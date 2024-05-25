@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.parent-container {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #b7a2e1
+    ;
+}
+
+.child-first{
+    background-color:#9f7ed8 ;
+}
+
+.child-second{
+    background-color:#7d53c2 ;
+}
+
+

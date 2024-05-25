@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubbling</title>
+    <link rel="stylesheet" crossorigin href="assets/style.css">
+  </head>
+  <body>
+
+    <!--Container-->
+    <div class="parent-container one" id="one">
+
+      <!--Child 1 -->
+      <div class="w-6/12 h-3/6 flex justify-center items-center child-first rounded-sm " id="two">
+
+        <!--Child 2 -->
+        <div class="w-6/12 h-3/6 child-second rounded-sm" id="three">
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script>
+      const divOne = document.querySelector('#one')
+      const divTwo = document.querySelector('#two')
+      const divThree = document.querySelector('#three')
+
+      const divs = [divOne, divTwo, divThree]
+      divs.forEach((div) => {
+        div.addEventListener('click', (e) => {
+          e.stopPropagation();
+          console.log(div.id)
+        })
+      })
+      
+
+
+
+
+
+    </script>
+  </body>
+  
+</html>
+
+
+
+
+<!-- 
+stopPropagation can be used in another element also , that is going to be fired normally .  
+ -->
