@@ -74,6 +74,11 @@
         "number": 15,
         "name": "Stick Navbar And Wikipedia API",
         "path": "../21-Sticky-Navbar/dist/index.html"
+      },
+      {
+        "number": 16,
+        "name": "Bubbling - Propagation - EventCapture",
+        "path": "../22-Bubbling-Propagation-EventCapture/dist/index.html"
       }
 
 
