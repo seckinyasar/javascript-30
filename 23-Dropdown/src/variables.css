@@ -10,6 +10,11 @@
     --color-my-faded-purple2:#E1D9F4;
     --color-background-vue:#1A1A1A;
 
+    
+    --color-background-vue-toggle-day-hover:#2F2F2F;
+    --color-background-vue-toggle-day:#363636;
+
+
 
     /* SVG Fill */
     --svg-fill-vue-light:rgba(255, 255, 255, 0.87);

@@ -5,6 +5,9 @@
 
 
 
+/* GLOBALS  */
+
+
 html{
     background-color:var(--color-background-vue);
     font-family:var(--font-family-vue);
@@ -15,16 +18,32 @@ html{
     text-rendering: var(--text-rendering-vue);  
     -webkit-font-smoothing: var(--webkit-font-smoothing-vue);
 
+
+}
+
+
+.header-container div{
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+
+
 }
 
 
 
 
 
-.header-height-flex-items-center{
-    display: flex;
-    align-items: center;
-    height: 100%;
+
+
+
+/* HEADER SECTION --- LEFT */
+
+.header-container{
+    background-color: #1A1A1A;
+    color: var(--text-vue-dark-1);
+    border-bottom: 1px solid #363636;
 }
 
 .header-vue-js-text{
@@ -36,18 +55,7 @@ html{
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
 }
-
-.header-container{
-    background-color: #1A1A1A;
-    color: var(--text-vue-dark-1);
-    border-bottom: 1px solid #363636;
-}
-
-
-
-
 
 
 
@@ -70,21 +78,34 @@ html{
     color: #909090;
     font-weight: 600;
     font-size: 13px;
+    margin-top: 3px;
+    margin-left: 10px;
 }
 
 
 
-.header-left-ctrl-k{
+.header-container .header-left-ctrl-k{
     color: #666666;
     font-weight: 600;    
     font-size: 12px;
     
-    padding:2.5px 6px;
+    margin-top: 3px;
+    margin-left: 3px;
+    height: 40%;
+    padding:0px 5px;
     border-radius: 4px;
     border : 1px solid #666666; 
 
 }
 
+
+
+
+
+
+
+
+/* HEADER SECTION --- RIGHT */
 
 .header-right-dropdown{
 	fill: var(--svg-fill-vue-transparent);
@@ -97,27 +118,87 @@ html{
 
 }
 
-
 .header-dropdown-cursor{
     cursor: pointer;
     user-select: none;
 }
 
 .header-right-languages{
-    height: 16px;
-    width: 16px;
+    height: 17px;
+    width: 45px;
 	fill: var(--svg-fill-vue-light);
-    margin: 0px 12px;
+
 }
+
+.header-container .header-right-languages-border{
+    border-right: 1px solid #363636;
+    border-left: 1px solid #363636 ; 
+    height: 50% ;
+}
+
 .header-right-languages-container{
     display: flex;
     align-items: center;
     height: 100%;
-    border-right: 1px solid #363636;
-    border-left: 1px solid #363636;  
     margin: 0px 8px;
 }
 
+/* DAY NIGHT TOGGLE BUTTON */
+.header-container .header-right-day-night-toggle-button{
+    background-color: var(--color-background-vue-toggle-day-hover);
+    height: 20px;
+    width: 40px;
+    border-radius: 0.75rem;
 
+
+    align-items: flex-start ;
+    position: relative;
+    
+
+    flex-shrink: 0;
+    cursor:pointer;
+    overflow: hidden;
+    outline: 1px solid #363636;
+}
+
+
+
+
+
+/* DAY NIGHT SVG ICON */
+.header-right-night-icon{
+
+    fill: var(--svg-fill-vue-light);
+    height: 20px;
+    width: 20px;
+    stroke: #909090;
+    stroke-width: 0.00001px;
+    padding: 3.5px;
+    border-radius: 20px;
+    background-color: var(--color-background-vue);
+
+    right: 0px;
+    bottom: 0px;
+
+    overflow: hidden;
+    position: absolute;
+
+
+	cursor: pointer;
+    transition: opacity 0.25s ease 0s;
+	vertical-align: middle;
+}
+
+
+/* GITHUB X DISCORD SVG */
+.header-right-svg-github-x-discord{
+    fill: var(--svg-fill-vue-transparent);
+    height: 20px;
+    width: 20px;
+
+    cursor: pointer;
+	overflow: hidden;
+	vertical-align: middle;
+}
 
 
