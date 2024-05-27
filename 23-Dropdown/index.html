@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://vuejs.org/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap">
+
+
+      
+    <title>Vue Header Clone</title>
+  </head>
+  <body>
+
+
+    <!--Screen Container-->
+    <div class="w-screen min-h-screen   ">
+
+      <!--Header-->
+      <div class="flex w-full h-16   header-container">
+
+        <!--Header - Left Part -->
+        <div class="flex ml-72 items-center w-4/12 h-full">
+          
+          <!--Vue Js Logo-->
+          <div class="flex space-x-2 mr-2 ">
+            <img src="https://vuejs.org/logo.svg" alt="Vue Js Logo" class="h-6">
+          </div>
+
+          <!--Vue Js Text-->
+          <div>
+            <span class="header-vue-js-text ">Vue.js</span>
+          </div>
+
+
+          <!--Search Container-->
+          <div class="flex items-center    ml-7">
+            <!--Search Icon-->
+            <div class="mt-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="svg-search-icon" viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/></svg>
+           </div>
+          
+
+          <!--Search Text-->
+          <div class="ml-1.5 header-left-search">
+            Search
+          </div>
+
+          <!--CTRL K -->
+          <div class="ml-1.5    header-left-ctrl-k">
+            Ctrl K
+          </div>
+
+
+
+        </div>
+
+
+
+        </div>
+
+
+
+
+
+        <!--Header -Right Part -->
+        <div class="flex items-center w-8/12 mx-64 ">
+
+          <!--Right Part Container-->
+          <div class="flex items-center space-x-8 ">
+
+            <!--Docs-->
+            <div class="flex items-center">
+              <span>Docs</span>
+              <svg class="header-right-dropdown" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="vt-flyout-button-text-icon"><path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z" /></svg>
+            </div>
+
+            <!--API-->
+            <div class="h-full">
+              API
+            </div>
+
+            <!--Playground-->
+            <div class="">
+              Playground
+            </div>
+
+            <!--Ecosystem-->
+            <div class="flex items-center">
+              <span>Ecosystem</span>
+              <svg class="header-right-dropdown" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="vt-flyout-button-text-icon"><path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z" /></svg>
+            </div>
+
+            <!--About-->
+            <div class="flex items-center">
+              <span>About</span>
+              <svg class="header-right-dropdown" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="vt-flyout-button-text-icon"><path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z" /></svg>
+            </div>
+
+            <!--Sponsors-->
+            <div class="">
+              Sponsors
+            </div>
+
+            <!--Partners-->
+            <div class="">
+              Partners
+            </div>
+
+
+            <!--Languages-->
+            <div class="header-right-languages-container">
+              <svg class="header-right-languages" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="vt-locales-btn-icon" data-v-8150bc26=""><path d="M0 0h24v24H0z" fill="none"/><path d=" M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z " class="css-c4d79v"/></svg>
+            </div>
+
+
+
+            
+          </div>
+          
+
+        </div>
+
+        
+      </div>
+
+
+    </div>
+
+
+  </body>
+  
+</html>

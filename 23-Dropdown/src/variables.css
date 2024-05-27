@@ -1,0 +1,55 @@
+:root {
+    /* Color Palette */
+    --color-my-cream:#F0E68C;
+    --color-my-vanilia-gold:#F3E5AB;
+    --color-my-faded-rose:#F2D7D5;
+    --color-my-peach-rose:#F4C2C2;
+    --color-my-purple:#D1BFF2;
+    --color-my-purple2:#decffa;
+    --color-my-faded-purple:#C8C1D6;
+    --color-my-faded-purple2:#E1D9F4;
+    --color-background-vue:#1A1A1A;
+
+
+    /* SVG Fill */
+    --svg-fill-vue-light:rgba(255, 255, 255, 0.87);
+    --svg-fill-vue-transparent:rgba(235, 235, 235, 0.6);
+
+
+
+    /* Typography */
+    --font-family-vue:"Inter var experimental", "Inter var", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --line-height-vue:24px;
+
+    --letter-spacing-vue:0.2px;
+
+    --font-size-vue-16:16px;
+    --font-size-vue-14:14px;
+    --font-size-vue-13:13px;
+    --font-size-vue-12:12px;
+    --font-size-vue-10:10px;
+
+    --font-weight-vue-400:400;
+    --font-weight-vue-500:500;
+    --font-weight-vue-600:600;
+    --font-weight-vue-700:700;
+
+
+    --text-rendering-vue:optimizeLegibility;
+
+    --webkit-font-smoothing-vue:antialiased;
+
+
+
+    --text-vue-dark-1: rgba(255, 255, 255, 0.87);
+
+
+    /* Spacing */
+    
+}
+
+
+
+
+
+

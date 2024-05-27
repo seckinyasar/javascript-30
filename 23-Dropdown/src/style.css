@@ -1,0 +1,123 @@
+@import url('variables.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html{
+    background-color:var(--color-background-vue);
+    font-family:var(--font-family-vue);
+    line-height: var(--line-height-vue);
+    letter-spacing: var(--letter-spacing-vue);
+    font-size: var(--font-size-vue-13);
+    font-weight: var(--font-weight-vue-500);
+    text-rendering: var(--text-rendering-vue);  
+    -webkit-font-smoothing: var(--webkit-font-smoothing-vue);
+
+}
+
+
+
+
+
+.header-height-flex-items-center{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header-vue-js-text{
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: var(--font-size-vue-16);
+    overflow-wrap: break-word;
+    font-synthesis: style;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+.header-container{
+    background-color: #1A1A1A;
+    color: var(--text-vue-dark-1);
+    border-bottom: 1px solid #363636;
+}
+
+
+
+
+
+
+
+.svg-search-icon{
+    fill: transparent;
+    height: 15px;
+    width: 15px;
+    stroke: #909090;
+    stroke-width: 1.5px;
+
+    user-select: none;
+    vertical-align:middle;
+    cursor: pointer;
+
+}
+
+
+
+.header-left-search{    
+    color: #909090;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+
+
+.header-left-ctrl-k{
+    color: #666666;
+    font-weight: 600;    
+    font-size: 12px;
+    
+    padding:2.5px 6px;
+    border-radius: 4px;
+    border : 1px solid #666666; 
+
+}
+
+
+.header-right-dropdown{
+	fill: var(--svg-fill-vue-transparent);
+    height: 15px;
+    width: 15px;
+    stroke: #909090;
+    stroke-width: 0.1px;
+	margin: 2.5px 0px 0px 4px;
+
+
+}
+
+
+.header-dropdown-cursor{
+    cursor: pointer;
+    user-select: none;
+}
+
+.header-right-languages{
+    height: 16px;
+    width: 16px;
+	fill: var(--svg-fill-vue-light);
+    margin: 0px 12px;
+}
+.header-right-languages-container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-right: 1px solid #363636;
+    border-left: 1px solid #363636;  
+    margin: 0px 8px;
+}
+
+
+
+
