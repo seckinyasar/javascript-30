@@ -16,6 +16,11 @@
 
 
 
+
+
+
+
+
     /* SVG Fill */
     --svg-fill-vue-light:rgba(255, 255, 255, 0.87);
     --svg-fill-vue-transparent:rgba(235, 235, 235, 0.6);
@@ -34,6 +39,7 @@
     --font-size-vue-12:12px;
     --font-size-vue-10:10px;
 
+    --font-weight-vue-300:400;
     --font-weight-vue-400:400;
     --font-weight-vue-500:500;
     --font-weight-vue-600:600;

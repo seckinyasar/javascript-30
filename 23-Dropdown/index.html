@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://vuejs.org/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="src/style.css" rel="stylesheet">
+    <title>Vue Header Clone</title>
 
+    <link rel="icon" type="image/svg+xml" href="https://vuejs.org/logo.svg" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap">
-    <title>Vue Header Clone</title>
+
 
 
   </head>
@@ -16,17 +17,17 @@
 
 
     <!--Screen Container-->
-    <div class="min-h-screen w-screen flex  ">
+    <div class="min-h-screen w-screen flex ">
 
       <!--Header Layout-->
-      <div class="flex justify-center  h-16 w-full  header-container">
+      <div class="flex w-full  justify-center header-container  ">
 
         <!--Header Container-->
-        <div class="Hello">
+        <div class="max-w-[90rem] w-full    ">
 
 
         <!--Header - Left Part -->
-        <div class="h-full w-4/12">
+        <div class="mr-auto ">
           
           <!--Vue Js Logo-->
           <div class=" space-x-2 mr-2 ">
@@ -68,19 +69,33 @@
         </div>
 
 
-
+          
 
 
         <!--Header -Right Part -->
-        <div class="w-8/12 ">
+        <div class="">
 
           <!--Right Part Container-->
-          <div class="gap-x-6">
+          <div class="flex space-x-6">
 
             <!--Docs-->
-            <div class="">
+            <div class="relative header-dropdown-toggle ">
               <span>Docs</span>
               <svg class="header-right-dropdown" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="vt-flyout-button-text-icon"><path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z" /></svg>
+              
+              <!--Dropdown - Docs-->
+              <div class="header-dropdown">
+
+                <a href="#">Guide</a>
+                <a href="#">Tutorial</a>
+                <a href="#">Examples</a>
+                <a href="#">Quick Start</a>
+                <a href="#">Glossary</a>
+                <a href="#">Error Reference</a>
+                <a href="#">Vue 2 Docs<svg class="dropdown-svg-docs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewBox="0 0 24 24" width="24px" class="vt-link-icon"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"/></svg></a>
+                <a href="#">Migration from Vue 2<svg class="dropdown-svg-docs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewBox="0 0 24 24" width="24px" class="vt-link-icon"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"/></svg></a>
+
+              </div>
             </div>
 
             <!--API-->
@@ -94,10 +109,67 @@
             </div>
 
             <!--Ecosystem-->
-            <div class="">
+            <div class="header-dropdown-toggle relative">
               <span>Ecosystem</span>
               <svg class="header-right-dropdown" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="vt-flyout-button-text-icon"><path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z" /></svg>
+
+
+
+              <!--Dropdown - Ecosystem-->
+              <div class="header-dropdown">
+                <div class="header-dropdown-box-border">
+
+                  <p>RESOURCES</p>
+                  <a href="#">Partners</a>
+                  <a href="#">Theme</a>
+                  <a href="#">UI Components</a>
+                  <a href="#">Certification</a>
+                  <a href="#">Jobs</a>
+                  <a href="#">T-Shirt Shop</a>
+                </div>
+
+                <div class="header-dropdown-box-border">
+
+                  <p>OFFICIAL LIBRARIES</p>
+                  <a href="#">Vue Router</a>
+                  <a href="#">Pinia</a>
+                  <a href="#">Tooling Guide</a>
+                </div>
+
+                <div class="header-dropdown-box-border">
+
+                  <p>VIDEO COURSES</p>
+                  <a href="#">Vue Mastery</a>
+                  <a href="#">Vue School</a>
+                </div>
+
+
+
+                <div class="header-dropdown-box-border">
+                  <p>HELP</p>
+                  <a href="#">Discord Chat</a>
+                  <a href="#">Github Discussions</a>
+                  <a href="#">DEV Community</a>
+                </div>
+
+                <div class="header-dropdown-box-border ">
+                  <p>NEWS</p>
+                  <a href="#">Blog</a>
+                  <a href="#">Twitter</a>
+                  <a href="#">Events</a>
+                  <a href="#">Newsletters</a>
+                </div>
+
+
+              </div>
+
+
+
+
+
             </div>
+
+
 
             <!--About-->
             <div class="">
@@ -142,7 +214,7 @@
 
               <!--GITHUB LINK-->
               <div>
-                  <div class="h-2/4 ">
+                  <div class="h-2/4">
                     <svg class="header-right-svg-github-x-discord" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="vt-social-link-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                 </div>
               </div>
@@ -182,6 +254,7 @@
     </div>
 
 
+    <script type="module" src="src/script.js"></script>
   </body>
   
 </html>

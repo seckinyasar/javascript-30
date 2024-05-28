@@ -15,20 +15,19 @@ html{
     letter-spacing: var(--letter-spacing-vue);
     font-size: var(--font-size-vue-13);
     font-weight: var(--font-weight-vue-500);
+
+    box-sizing: border-box;
+/*     
     text-rendering: var(--text-rendering-vue);  
-    -webkit-font-smoothing: var(--webkit-font-smoothing-vue);
+    -webkit-font-smoothing: var(--webkit-font-smoothing-vue); */
 
 
 }
-
 
 .header-container div{
     display: flex;
     align-items: center;
     height: 100%;
-
-
-
 }
 
 
@@ -44,6 +43,7 @@ html{
     background-color: #1A1A1A;
     color: var(--text-vue-dark-1);
     border-bottom: 1px solid #363636;
+    height: 4.25rem;
 }
 
 .header-vue-js-text{
@@ -133,7 +133,7 @@ html{
 .header-container .header-right-languages-border{
     border-right: 1px solid #363636;
     border-left: 1px solid #363636 ; 
-    height: 50% ;
+    height: 50% ;   
 }
 
 .header-right-languages-container{
@@ -202,3 +202,129 @@ html{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* DROPDOWN  */
+
+.header-container .header-dropdown{
+    position: absolute;
+    top: 3.3rem;
+    right: 0;
+    background-color: #1A1A1A;
+	border: 1px solid rgba(84, 84, 84, 0.48);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 2px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 0.5rem;	
+    box-sizing: border-box;
+
+    z-index: 1000;
+    overflow: auto;
+
+    padding: 12px 0px;
+	min-width: 16rem;
+    
+    max-height: 85vh;
+    overflow-y: auto; 
+
+    height: auto;
+
+    transition: background-color 0.5s ease 0s;
+    display: none;
+}
+
+/* SCROLLBAR STYLES */
+.header-dropdown::-webkit-scrollbar { 
+    width: 8px; 
+  }
+  
+  .header-dropdown::-webkit-scrollbar-track {
+    background: #2a2a2a; /* Track (background) color */
+  }
+  
+  .header-dropdown::-webkit-scrollbar-thumb {
+    background-color: var(--svg-fill-vue-light); /* Thumb (handle) color */
+    border-radius: 4px;   /* Optional: Round the corners */
+  }
+
+/* SCROLLBAR STYLES END */
+
+
+
+/* DROPDOWN  A  */
+.header-container .header-dropdown a {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    line-height: 2.25rem;
+    padding: 0px 20px;
+    height: 100%;
+}
+.header-container .header-dropdown-box-border{
+    box-sizing: border-box;
+    display:block;
+    border-bottom: 1px solid #363636;
+    padding: 10px 0px;
+
+}
+.header-dropdown .header-dropdown-box-border:last-child {
+    border-bottom: none;
+    margin-bottom: -10px;
+}
+.header-dropdown .header-dropdown-box-border:first-child {
+    margin-top: -5px;
+}
+
+
+
+.header-container .header-dropdown-box-border p{
+    color: rgba(235, 235, 235, 0.38);
+    font-weight: var(--font-weight-vue-600);
+    font-size: var(--font-size-vue-10);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    height: 100%;
+}
+
+
+
+
+
+
+.dropdown-svg-docs{
+	fill: rgba(235, 235, 235, 0.38);
+    height: 19px;
+    stroke: #909090;
+    stroke-width: 0.00001px;
+    background-color: var(--color-background-vue);
+    
+
+    padding: 3.5px; 
+
+	cursor: pointer;
+}
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------- */
+/* DROPDOWN ENDREGION */
