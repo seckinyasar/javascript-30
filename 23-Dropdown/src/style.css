@@ -313,12 +313,13 @@ html{
 .dropdown-svg-docs{
 	fill: rgba(235, 235, 235, 0.38);
     height: 19px;
+    width: 19px;
     stroke: #909090;
-    stroke-width: 0.00001px;
+    stroke-width: 0.0000000001px;
     background-color: var(--color-background-vue);
     
 
-    padding: 3.5px; 
+    padding: 4px; 
 
 	cursor: pointer;
 }
