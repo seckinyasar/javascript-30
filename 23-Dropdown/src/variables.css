@@ -8,29 +8,43 @@
     --color-my-purple2:#decffa;
     --color-my-faded-purple:#C8C1D6;
     --color-my-faded-purple2:#E1D9F4;
-    --color-background-vue:#1A1A1A;
 
     
-    --color-background-vue-toggle-day-hover:#2F2F2F;
-    --color-background-vue-toggle-day:#363636;
+
+    /* DARK MODE */
+    --color-background-vue:#1A1A1A;
+    --color-text-vue-dark-1: rgba(255, 255, 255, 0.87);
+    --color-header-border-bottom-dark:#363636;
+
+
+    --color-search-svg-fill-transparent:transparent;
+    --color-search-svg-stroke:#909090;
+    --color-header-ctrl-k:#666666;
+
+    --color-svg-dropdown-dark:rgba(235, 235, 235, 0.6);
 
 
 
 
 
 
+    /* LIGHT MODE */
+    --color-background-vue-light:#FFFFFF;
+    
 
 
-    /* SVG Fill */
-    --svg-fill-vue-light:rgba(255, 255, 255, 0.87);
-    --svg-fill-vue-transparent:rgba(235, 235, 235, 0.6);
+
 
 
 
     /* Typography */
     --font-family-vue:"Inter var experimental", "Inter var", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    --line-height-vue:24px;
 
+    --text-vue-light-1: #213547;
+
+
+
+    --line-height-vue:24px;
     --letter-spacing-vue:0.2px;
 
     --font-size-vue-16:16px;
@@ -47,20 +61,12 @@
 
 
     --text-rendering-vue:optimizeLegibility;
-
     --webkit-font-smoothing-vue:antialiased;
 
 
 
-    --text-vue-dark-1: rgba(255, 255, 255, 0.87);
 
 
     /* Spacing */
     
 }
-
-
-
-
-
-
