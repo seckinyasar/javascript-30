@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const nightIcon = document.querySelector('.night-icon')
     const dayIcon = document.querySelector('.day-icon')
     const body = document.body;
+    
 
     // Check for saved user preference, if any, on load of the website
     if (localStorage.getItem('theme') === 'dark') {

@@ -5,10 +5,10 @@
 
 
 
+
 /* GLOBALS  */
 
-
-html{
+body{
     background-color:var(--color-background-vue);
     color: var(--color-text-vue-dark-1);
 
@@ -21,7 +21,6 @@ html{
     
     text-rendering: var(--text-rendering-vue);  
     -webkit-font-smoothing: var(--webkit-font-smoothing-vue); 
-
 
 }
 
@@ -40,13 +39,14 @@ html{
 
 .header-container{
     border-bottom: 1px solid var(--color-header-border-bottom-dark);
-    height: 4.25rem;
+    height: 3.5rem;
 }
 
 .header-vue-js-text{
+    font-size: var(--font-size-vue-16);
+
     white-space: nowrap;
     font-weight: 500;
-    font-size: var(--font-size-vue-16);
     overflow-wrap: break-word;
     font-synthesis: style;
     box-sizing: border-box;
@@ -63,7 +63,7 @@ html{
     height: 15px;
     width: 15px;
     stroke-width: 1.5px;
-
+    margin-top: 1px;
     user-select: none;
     vertical-align:middle;
     cursor: pointer;
@@ -72,7 +72,7 @@ html{
 
 .header-left-search{    
     color: var(--color-header-search-text);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 13px;
     margin-top: 3px;
     margin-left: 10px;
@@ -103,14 +103,14 @@ html{
 /* HEADER SECTION --- RIGHT */
 
 .header-right-dropdown{
-	fill: var(--color-svg-dropdown-dark);
+	fill: var(--color-svg-dropdown-linkIcon-dark);
     stroke: var(--color-search-svg-stroke);
 
 
     height: 15px;
     width: 15px;
     stroke-width: 0.1px;
-	margin: 2.5px 0px 0px 4px;
+	margin: 1.5px 0px 0px 4px;
 
 
 }
@@ -121,6 +121,7 @@ html{
 }
 
 .header-right-languages{
+    fill: var(--color-text-vue-dark-1);
     height: 17px;
     width: 45px;
 
@@ -186,17 +187,18 @@ html{
 
 
 .day-icon{
+    background-color:var(--color-svg-day-icon);
+	fill: var(--color-svg-day-icon-fill);
+
     display: none;
-	fill: rgb(255, 252, 252);
-    background-color:whitesmoke ;
     left: 0px;
 }
 /*      NIGHT ICON       */
 .night-icon{
+    fill: var(--color-svg-night-icon);
+    stroke: var(--color-search-svg-stroke);
+
     display: none;
-    fill: var(--svg-fill-vue-light);
-    background-color: var(--color-background-vue);
-    stroke: #909090;
     right: 0px;
 }
 
@@ -207,12 +209,34 @@ html{
     display: block;
 }
 
+/* NIGHT MODE */
 .light-mode{
-    background-color: var(--color-background-vue-light);
-    color: var(--text-vue-light-1) ;
+    
+    /* Base */
+    --color-background-vue:#FFFFFF ;
+    --color-text-vue-dark-1:#213547;
+    --color-header-border-bottom-dark:#3C3C3C1F;
+
+	
+    /* Header Left */
+    --color-search-svg-fill-transparent:transparent;
+    --color-search-svg-stroke:#676666b3;
+    --color-header-search-text:#354c6098;
+    --color-header-ctrl-k:#4766825d;
 
 
+    /* Dropdowns */
+    --color-dropdowns-border:#00000000;
+    --color-dropdowns-scrollbar-track: gray;
+    --color-dropdowns-ecosystem-p-titles:rgba(235, 235, 235, 0.38);
+    --color-dropdowns-links-icon:#3C3C3C54;
+    --color-svg-dropdown-linkIcon-dark:#213547;
+    --color-dropdown-svgs-github-fill:#213547;
 
+    /* Header Right */
+    --color-svg-day-icon-background:#F1F1F1;
+    --color-svg-day-icon-fill:#fac904;
+    --color-svgs-github-x-discord-fill:#3C3C3CB3;
 
 
 }
@@ -227,7 +251,7 @@ html{
 
 /* GITHUB X DISCORD SVG */
 .header-right-svg-github-x-discord{
-    fill: var(--svg-fill-vue-transparent);
+    fill: var(--color-svgs-github-x-discord-fill);
     height: 20px;
     width: 20px;
 
@@ -236,9 +260,9 @@ html{
 	vertical-align: middle;
 }
 
-
-.header-right-svg-languages-github{
-    fill: var(--svg-fill-vue-transparent);
+/* DROPDOWN GITHUB ICONS */
+.header-right-svg-languages-dropdown-github{
+    fill: var(--color-dropdown-svgs-github-fill);
     height: 18px;
     width: 18px;
 
@@ -257,35 +281,28 @@ html{
 
 
 
-
-
-
-
-
-
-
-
 /*      DROPDOWN     */
 
 .header-container .header-dropdown{
+    background-color:var(--color-background-vue);
+	border: 1px solid var(--color-dropdowns-border);
+	box-shadow: #0000001A 2px 12px 12px 2px, #00000014 0px 2px 6px 0px;
+
+
     position: absolute;
-    top: 3.3rem;
+    top: 3rem;
     right: 0;
-    background-color: #1A1A1A;
-	border: 1px solid rgba(84, 84, 84, 0.48);
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 2px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
     border-radius: 0.5rem;	
     box-sizing: border-box;
 
     z-index: 1000;
-    overflow: auto;
 
     padding: 12px 0px;
-	min-width: 16rem;
+	min-width: 13rem;
     
     max-height: 85vh;
     overflow-y: auto; 
-
+    overflow: auto;
     height: auto;
 
     transition: background-color 0.5s ease 0s;
@@ -295,18 +312,19 @@ html{
 /* SCROLLBAR STYLES */
 .header-dropdown::-webkit-scrollbar { 
     width: 8px; 
-  }
+}
   
-  .header-dropdown::-webkit-scrollbar-track {
-    background: #2a2a2a; /* Track (background) color */
-  }
-  
-  .header-dropdown::-webkit-scrollbar-thumb {
-    background-color: var(--svg-fill-vue-light); /* Thumb (handle) color */
+.header-dropdown::-webkit-scrollbar-track {
+    background:var(--color-dropdowns-scrollbar-track); /* Track (background) color */
+}
+.header-dropdown::-webkit-scrollbar-thumb {
+    background-color: var(--color-svgs-github-x-discord-fill); /* Thumb (handle) color */
     border-radius: 4px;   /* Optional: Round the corners */
-  }
+}
 
 /* SCROLLBAR STYLES END */
+
+
 
 
 
@@ -322,7 +340,7 @@ html{
 .header-container .header-dropdown-box-border{
     box-sizing: border-box;
     display:block;
-    border-bottom: 1px solid #363636;
+    border-bottom: 1px solid var(--color-header-border-bottom-dark);
     padding: 10px 0px;
 }
 .header-container .header-dropdown-box-languages{
@@ -353,13 +371,14 @@ html{
 }
 
 .header-dropdown .header-dropdown-box-language-hr{
-    border-bottom: 1px solid #363636;   
+    border-bottom: 1px solid var(--color-header-border-bottom-dark);
 }
 
 .header-container .header-dropdown-box-border p{
-    color: rgba(235, 235, 235, 0.38);
+    color: var(--color-dropdowns-ecosystem-p-titles);
     font-weight: var(--font-weight-vue-600);
     font-size: var(--font-size-vue-10);
+
     display: flex;
     align-items: center;
     box-sizing: border-box;
@@ -372,21 +391,18 @@ html{
     justify-content:left;
     margin-top: 12px;
     margin-left: 15px;
-
 }
 
 
 
-/*      LINKS ICON        */
+/*      LINKS ICON IN DOCS      */
 .dropdown-svg-docs{
-	fill: rgba(235, 235, 235, 0.38);
+	fill: var(--color-dropdowns-links-icon);
+    stroke: var(--color-search-svg-stroke);
+
     height: 19px;
     width: 19px;
-    stroke: #909090;
     stroke-width: 0.0000000001px;
-    background-color: var(--color-background-vue);
-    
-
     padding: 4px; 
 
 	cursor: pointer;
