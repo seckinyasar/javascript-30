@@ -1,7 +1,9 @@
 These are the apps that I have built during javascript exercise tutorials .  
 
 ### Demo
-[Link to demos](https://seckinyasar.github.io/javascript-30/dist/index.html)
+[Link to demos](https://seckinyasar.github.io/javascript-30/dist/index.html) 
+
+
 
 
 
