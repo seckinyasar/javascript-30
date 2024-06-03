@@ -1,9 +1,12 @@
 {
+  "homepage": "https://seckinyasar.github.io/javascript-30/23-Dropdown/",
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "deploy":"npm run build",
+    "predeploy":"-d dist",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
