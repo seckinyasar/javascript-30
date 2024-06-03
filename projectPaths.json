@@ -79,6 +79,11 @@
         "number": 16,
         "name": "Bubbling - Propagation - EventCapture",
         "path": "../22-Bubbling-Propagation-EventCapture/dist/index.html"
+      },
+      {
+        "number": 17,
+        "name": "Dropdowns - Night & Day Toggle ",
+        "path": "../23-Dropdown/dist/index.html"
       }
 
 
